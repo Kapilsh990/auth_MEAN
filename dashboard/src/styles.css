@@ -1,0 +1,660 @@
+  
+  /* Thin 100
+  Extra-light 200
+  Light 300
+  Regular 400
+  Medium 500
+  Semi-bold 600
+  Bold 700
+  Extra-bold 800
+  Black 900 */
+  *{
+    margin: 0;
+    padding: 0;
+ }
+
+ :root {
+  /* COLORS */
+  
+  --baseFontSize: 14px;
+  --color-a : #464747;
+  --color-b : #3a3a3a;
+  --color-c : #3a3a3a;
+  --color-d : #3a3a3a;
+  --color-e : #3a3a3a;
+  --sector-2-color : #007fe8;
+  --sector-3-color : #ff4e00;
+  --sector-4-color : #2bb673;
+  --sector-5-color : #9b539b;
+  --meta-heading:16px;
+  --meta-heading-font-weight:400;
+  --goal-font-size: 16px;
+  --indicator-size: 13px
+
+}
+
+
+ body{
+    color: #333 !important;
+    width: 100%;
+    height: 100%;
+    font-size: var(--baseFontSize) !important;
+    }
+html{
+  font-size: 100%; 
+}
+
+  @font-face {
+    font-family: IBMPlexSans-Light ;
+    src: url('assets/fonts/IBMPlexSans-Light.ttf');
+  }
+
+  @font-face {
+    font-family: IBMPlexSans-Medium ;
+    src: url('assets/fonts/IBMPlexSans-Medium.ttf');
+  }
+
+  @font-face {
+    font-family: IBMPlexSans-Regular ;
+    src: url('assets/fonts/IBMPlexSans-Regular.ttf');
+  }
+
+  
+  ul,li,ol,li {
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+  }
+
+
+  h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0 !important;
+    font-family: IBMPlexSans-Medium ;
+    }
+   p{
+    margin-bottom: 0 !important;
+    font-family: IBMPlexSans-Regular ;
+   }
+    
+    a:hover{
+    text-decoration: none !important;
+    }
+    
+  
+
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+ }
+
+
+ header {
+  background: #f6f9fb;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  height: 60px;
+  top: 0;
+  z-index: 1;
+}
+
+.icon-width {
+  position: relative;
+  width: 40px;
+  top: 5px;
+}
+
+img.img-fluid.icon-size {
+    width: 30px;
+}
+
+a.nav-link.menu-icon {
+    padding-right: .8rem !important;
+    padding-left: .8rem !important;
+}
+p.goals {
+    font-size: 12px;
+}
+
+p.goals-num {
+  font-family: 'Poppins', sans-serif;
+    color: #ee2e7c;
+    font-size: 18px;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow:none;
+}
+
+img.img-fluid.drop-icon-size {
+    width: 40px;
+}
+
+.mega-dropdown {
+    height: 100%;
+}
+
+.multi-level-d{
+    position: relative;
+    width: 100px;
+}
+
+
+.multi-level-d::after{
+    content: '';
+    background: #a6a7a9;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+
+h6.goalstag {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+h5.goalsnum {
+    color: #ef468c;
+}
+
+.goal-num{
+  position: relative;
+}
+
+.goal-num::after {
+  content: "";
+  background: #bcbfc1;
+  position: absolute;
+  width: 1px;
+  height: 130%;
+  right: -20px;
+  top: -10px;
+}
+.w-100px{
+  width: 100px;
+}
+
+button.btn.btn-primary.dropdown-toggle.p-0.area-dropdown {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-weight: 400;
+  font-size: 18px;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+p.area-tags {
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: right;
+  position: relative;
+  right: 40px;
+}
+
+p.time-tags {
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: right;
+  text-align: left;
+}
+
+
+.dropdown-toggle::after{
+  content: "";
+  background-repeat: no-repeat;
+  width: 29px;
+  height: 13px;
+  border: none !important;
+  top: 8px;
+  position: relative;
+  display: inline-block;
+  right: 0px;
+  background-size: 14px;
+  background-image: url('assets/images/drop-icon.svg');
+}
+
+.dropdown-menu{
+  padding: 0 !important;
+}
+
+.dropdown-item{
+  border-bottom: 1px solid #ddd;
+}
+.area-div{
+  position: relative;
+}
+
+.area-div::after{
+  content: "";
+  background: #bcbfc1;
+  position: absolute;
+  width: 1px;
+  height: 130%;
+  right: 0px;
+  top: -10px;
+}
+
+.time-drop .dropdown-menu{
+  min-width: 6rem;
+}
+
+
+/*end of header css*/
+
+.sidebar-panel{
+  height: calc(100vh - 60px);
+  width:80px;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  border-right: 1px solid #ddd;
+}
+
+.menu-img {
+  padding: 20px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-img:last-child{
+   border:none
+}
+
+li.menu-img.active {
+  background: #ee2e7c;
+  transition: 1s ease-out;
+}
+li.menu-img.active img{
+  filter: brightness(100)
+}
+.menu-img img,li.menu-img{
+  transition: .5s;
+}
+li.menu-img:hover {background: #ee2e7c;}
+
+li.menu-img:hover img {
+    filter: brightness(100);
+}
+
+/*end of sidebar*/
+
+
+.right-panel{
+  margin-left: 80px;
+}
+
+.jamaica-goals {
+  background: #ffbde1;
+}
+
+.goals-list h2 {
+  color: #ee2a7b;
+  font-size: 20px;
+}
+
+.indiacators-name{
+  cursor: pointer;
+}
+
+.indiacator-chart {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 1px rgb(64 60 67 / 32%);
+}
+
+.indiacator-chart-size{
+  height: 55vh;
+  width: 100%;
+}
+
+span.sourcetag {
+  color: #5e6060;
+  font-size: 11px;
+}
+
+span.source {
+  color: #8a8a8a;
+}
+
+h4.outcome-rage {
+  font-size: 16px;
+}
+
+/* .row.goals-div {
+  height: calc(100vh - 190px);
+  overflow: auto;
+} */
+
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #333;
+}
+
+.chart-icon{
+  position: relative;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+.nav_left.active{
+  transition: 1s ease-out;
+  position: relative;
+}
+
+.nav_left.active:after {
+  content: '';
+  background: #333;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -15px;
+}
+.logotext{
+  font-family: IBMPlexSans-Medium ;
+  line-height: 1.2em;
+  padding-top: 15px;
+}
+
+/* Mayank CSS Start*/
+
+.indicator-list {
+  display: flex;
+  width: 100%;
+}
+
+.indicator_text_div {
+  display: flex;
+  width: calc(100% - 4%);
+  align-items: flex-start;
+}
+
+.chart_icon {
+  width: 4%;
+  text-align: right;
+}
+img.meta_icon {
+  margin-top: 5px;
+  cursor: pointer;
+  transition: .5s;
+}
+img.meta_icon:hover{
+  transform: scale(1.05);
+}
+.indicator_text_div p {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: .5s;
+}
+.indicator_text_div p:hover{
+  filter: opacity(0.8);
+}
+.chart-burger-menu{
+  width: 4%;
+  text-align: right;
+}
+.chart_innerdiv_text {
+  display: flex;
+}
+.chart_innerdiv_text_wid_icon {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 4%);
+}
+.dropdown_charts {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.dropdown_charts {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.dropdown.years_drop2 {
+  position: relative;
+}
+
+.dropdown.years_drop2:after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  width: .5px;
+  height: 73%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d4d4d4;
+}
+.source-div {
+  margin-left: -25px;
+}
+.chart_innerdiv_text_wid_icon p {
+  text-transform: uppercase;
+}
+.chart_innerdiv_text_wid_icon p {
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.dropdown_charts .dropdown button {
+  text-transform: uppercase;
+  font-family: 'IBMPlexSans-Regular';
+  font-size: .9rem !important;
+}
+
+/* Map Legends CSS Start */
+.leg_bg_1 {
+  background-color: #f9a2ce;
+}
+
+.leg {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #3b4042;
+  margin-right: 5px;
+}
+
+.map_legends ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.map_legends ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.leg_bg_2 {
+  background-color: #ff88c9;
+}
+
+.leg_bg_3 {
+  background-color: #ff88c9;
+}
+
+.leg_bg_4 {
+  background-color: #ee2a7b;
+}
+
+.map_leg_number {
+  position: relative;
+  margin-top: 10px;
+  width: unset;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.map_leg_number {
+  position: relative;
+  margin-top: 10px;
+}
+
+.map_leg_number:after {
+  content: '';
+  position: absolute;
+  left: 70%;
+  width: 35%;
+  height: .5px;
+  background: #25260d;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.map_leg_number:before {
+  content: '';
+  position: absolute;
+  right: 70%;
+  width: 35%;
+  height: .5px;
+  background: #25260d;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.map_legends_data {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+}
+/* Map Legends CSS End */
+
+img.header_meta_icon {
+  margin-top: -4px;
+}
+ 
+
+.menu-img img {
+  width: 50%;
+}        
+
+.second_header_jamaica {
+  background: #eff5f9;
+  padding: 5px 0 5px;
+  text-align: center;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+p.jam_tags {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.map_icons {
+  position: absolute;
+  top: 130px;
+  right: 25px;
+  background: #fff;
+  padding: 20px 15px 20px 15px;
+  box-shadow: 0 2px 8px 6px rgb(64 60 67 / 3%);
+}
+
+.map_icons li {
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.map_icons hr {
+  margin: 0;
+}
+.map_icons li img{
+  transition: .5s;
+}
+.map_icons li:hover img{
+  transform: scale(1.2);
+}
+footer.jamaica_footer {
+  background: #eff5f9;
+    padding: 5px;
+    font-size: 9px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.second_header_jamaica_drop button.btn.btn-primary.dropdown-toggle.p-0.area-dropdown {
+  font-size: 15px;
+}
+.monitoring .dropdown-toggle::after{
+  display: none;
+}
+.pink_color{
+  background-color: #ee2a7b;
+}
+.jamaica-goals_light_pink {
+  background: #ffe1ef;
+}
+.outcome_inner_div .outcome_head_t {
+  padding: 0 3.5rem;
+}
+.output_inner_div {
+  background-color: #fff3f9;
+}
+
+.activities_inner_div {
+  background-color: #fff;
+}
+.activities_head_t {
+  padding: 0 2.5rem;
+}
+.hide_activity_div{
+  display: none;
+}
+.c_pointer{
+  cursor: pointer;
+  transition: .5s
+}
+.c_pointer:hover{
+  transform: scale(1.1);
+}
+.arrow_rotate {
+  transform: rotate(90deg);
+}
+.arrow-img{
+  cursor: pointer;
+}
+.indicator_text_div_light_color_border {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+h4.outcome-rage.outcome_head_t,h4.outcome-rage.activities_head_t {
+  padding-top: 15px;
+}
+.activities_inner_div .arrow-img, .activities_inner_div p {
+  cursor: default;
+}
+.jamaica_modal_header{
+  background-color: #f5f5f5;
+}/* You can add global styles to this file, and also import other style files */
