@@ -34,11 +34,11 @@ module.exports.login = (req,res,next)=>{
 		User.findOne({  email: req.body.email  }, function (err, userInfo) {
 
 			if (userInfo) {
-                console.log(userInfo.password,password)
+                // console.log(userInfo.password,password)
 				if (bcrypt.compareSync(password, userInfo.password)) {
                     
 					const token = jwt.sign({ id: userInfo._id,name:userInfo.name,email:userInfo.email }, process.env.privateKey, { expiresIn: '5h' });
-                    console.log(token,'loginnnnnnnnnnn');
+                    // console.log(token,'loginnnnnnnnnnn');
                     res.send({
                         status: 1, token: token, message: "Login successfull", user_details: {
                             name: userInfo.name, email: userInfo.email
